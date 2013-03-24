@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>WPF Applications Localization</value>
+  </data>
+  <data name="MessageBoxOKButtonContent" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="NameSelectingWindowTitle" xml:space="preserve">
+    <value>Select Name</value>
+  </data>
+  <data name="NameSelectingWindowName" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="NameSelectingWindowOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="NameSelectingWindowCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="SelectingProjectWindowTitle" xml:space="preserve">
+    <value>Select Project</value>
+  </data>
+  <data name="SelectingProjectWindowSelect" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="SelectingProjectWindowCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="UserEditingKeysWindowTitle" xml:space="preserve">
+    <value>Keys Editing</value>
+  </data>
+  <data name="UserEditingKeysWindowIsSelectedColumnHeader" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserEditingKeysWindowKeyColumnHeader" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="UserEditingKeysWindowTextColumnHeader" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="UserEditingKeysWindowOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="UserEditingKeysWindowRevert" xml:space="preserve">
+    <value>Revert changes</value>
+  </data>
+  <data name="UserEditingKeysWindowCancel" xml:space="preserve">
+    <value>Abort processing</value>
+  </data>
+  <data name="MainWindowSelectCzechLanguage" xml:space="preserve">
+    <value>Česky</value>
+  </data>
+  <data name="MainWindowSelectEnglishLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="MainWindowMainTab" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="MainWindowDirectoryHeader" xml:space="preserve">
+    <value>Directory</value>
+  </data>
+  <data name="MainWindowDirectory" xml:space="preserve">
+    <value>Select directory</value>
+  </data>
+  <data name="MainWindowProcessDirectory" xml:space="preserve">
+    <value>Localize</value>
+  </data>
+  <data name="MainWindowXAMLSettingsTab" xml:space="preserve">
+    <value>XAML settings</value>
+  </data>
+  <data name="MainWindowResultFile" xml:space="preserve">
+    <value>Localized file</value>
+  </data>
+  <data name="MainWindowPrefix" xml:space="preserve">
+    <value>Prefix: </value>
+  </data>
+  <data name="MainWindowSufix" xml:space="preserve">
+    <value>Sufix: </value>
+  </data>
+  <data name="MainWindowNamespace" xml:space="preserve">
+    <value>Namespace/assembly: </value>
+  </data>
+  <data name="MainWindowFileIdentifier" xml:space="preserve">
+    <value>File name: </value>
+  </data>
+  <data name="MainWindowSample" xml:space="preserve">
+    <value>Sample: </value>
+  </data>
+  <data name="MainWindowResourcesSettingsTab" xml:space="preserve">
+    <value>Dictionaries settings</value>
+  </data>
+  <data name="MainWindowResourcesRow" xml:space="preserve">
+    <value>Resources values</value>
+  </data>
+  <data name="MainWindowResourcesValuesPrefix" xml:space="preserve">
+    <value>New values prefix:</value>
+  </data>
+  <data name="MainWindowResourcesFiles" xml:space="preserve">
+    <value>Resource dictionaries</value>
+  </data>
+  <data name="MainWindowAddResources" xml:space="preserve">
+    <value>Add dictionaries</value>
+  </data>
+  <data name="MainWindowRemoveResources" xml:space="preserve">
+    <value>Remove dictionary</value>
+  </data>
+  <data name="MainWindowSelectedResources" xml:space="preserve">
+    <value>Selected resource dictionaries:</value>
+  </data>
+  <data name="UserInteractionErrorMessage" xml:space="preserve">
+    <value>There has been an exception:</value>
+  </data>
+  <data name="UserInteractionErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="UserInteractionMessageTitle" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="UserAbortExceptionMessage" xml:space="preserve">
+    <value>User abort processing.</value>
+  </data>
+  <data name="ResourcesDictionaryUpdatingExceptionMessage" xml:space="preserve">
+    <value>An error occurred while updating the resources dictionary.</value>
+  </data>
+  <data name="DocumentsLoadingExceptionMessage" xml:space="preserve">
+    <value>An error occurred while loading documents.</value>
+  </data>
+  <data name="DocumentsSerializingExceptionMessage" xml:space="preserve">
+    <value>An error occurred while saving the document.</value>
+  </data>
+  <data name="FileHasNotExpectedFormatExceptionMessage" xml:space="preserve">
+    <value>File has not expected format (XAML) and cannot be parsed.</value>
+  </data>
+  <data name="FileProcessingCompletedMessage" xml:space="preserve">
+    <value>File processing has been completed succesfully.</value>
+  </data>
+  <data name="FileProcessingErrorMessage" xml:space="preserve">
+    <value>The file could not be processed.</value>
+  </data>
+  <data name="ProcessingCompletedMessage" xml:space="preserve">
+    <value>Selected folder processing has been completed successfully.</value>
+  </data>
+  <data name="MainWindowMenuItemHeader" xml:space="preserve">
+    <value>!About</value>
+  </data>
+  <data name="MainWindowTextBlockText" xml:space="preserve">
+    <value>!Debug panel:</value>
+  </data>
+  <data name="MainWindowCheckBoxContent" xml:space="preserve">
+    <value>!Show binding errors</value>
+  </data>
+</root>

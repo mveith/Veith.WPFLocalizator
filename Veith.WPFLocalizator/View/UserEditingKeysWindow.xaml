@@ -1,0 +1,70 @@
+﻿<Controls:MetroWindow x:Class="Veith.WPFLocalizator.View.UserEditingKeysWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      xmlns:loc="http://wpflocalizeextension.codeplex.com"
+                      loc:LocalizeDictionary.DesignCulture="en-gb"
+                      Title="{loc:LocText Veith.WPFLocalizator.Resources:Resources:UserEditingKeysWindowTitle}"
+                      Height="600"
+                      Width="800"
+                      WindowStartupLocation="CenterOwner">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colours.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding FileName}"
+                   Margin="5"
+                   FontSize="15" />
+        <DataGrid Margin="5"
+                  Grid.Row="1"
+                  ItemsSource="{Binding Items}"
+                  AutoGenerateColumns="False"
+                  IsSynchronizedWithCurrentItem="False"
+                  CanUserReorderColumns="False">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Header="{loc:LocText Veith.WPFLocalizator.Resources:Resources:UserEditingKeysWindowIsSelectedColumnHeader}"
+                                        Binding="{Binding IsSelectedForLocalization}" />
+                <DataGridTextColumn Header="{loc:LocText Veith.WPFLocalizator.Resources:Resources:UserEditingKeysWindowKeyColumnHeader}"
+                                    Binding="{Binding Key}" />
+                <DataGridTextColumn Header="{loc:LocText Veith.WPFLocalizator.Resources:Resources:UserEditingKeysWindowTextColumnHeader}"
+                                    Width="*"
+                                    Binding="{Binding Value}"
+                                    IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel HorizontalAlignment="Right"
+                    Grid.Row="2"
+                    Orientation="Horizontal"
+                    Margin="5">
+            <Button Margin="5"
+                    Width="130"
+                    Height="30"
+                    Content="{loc:LocText Veith.WPFLocalizator.Resources:Resources:UserEditingKeysWindowOK}"
+                    Command="{Binding SaveKeysCommand}" />
+            <Button Margin="5"
+                    Width="130"
+                    Height="30"
+                    Content="{loc:LocText Veith.WPFLocalizator.Resources:Resources:UserEditingKeysWindowRevert}"
+                    Command="{Binding RevertCommand}" />
+            <Button Margin="5"
+                    Width="130"
+                    Height="30"
+                    Content="{loc:LocText Veith.WPFLocalizator.Resources:Resources:UserEditingKeysWindowCancel}"
+                    Command="{Binding CancelCommand}" />
+        </StackPanel>
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,11 @@
+﻿<Window x:Class="Veith.WPFLocalizator.EndToEndTests.Resources.TestXAML"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Titulek okna">
+    <Grid>
+        <TextBlock Name="TestTextBlock" Text="Vnitřní text" />
+        <Button Content="Text na tlačítku"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" />
+    </Grid>
+</Window>

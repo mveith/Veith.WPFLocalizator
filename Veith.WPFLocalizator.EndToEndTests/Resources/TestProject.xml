@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project>
+  <Directory>TestData</Directory>
+  <ResourcesDictionaries>
+    <ResourcesDictionary>TestData/Resources.cs-cz.resx</ResourcesDictionary>
+    <ResourcesDictionary>TestData/Resources.en-gb.resx</ResourcesDictionary>
+  </ResourcesDictionaries>
+  <Prefix>ProjectPrefix</Prefix>
+  <Suffix>ProjectSuffix</Suffix>
+  <NamespaceValue>MyNamespaceProject</NamespaceValue>
+  <ResourceFileName>ResourcesInProject</ResourceFileName>
+  <NewValuePrefix>!</NewValuePrefix>
+</Project>

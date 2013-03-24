@@ -1,0 +1,28 @@
+﻿<Application x:Class="Veith.WPFLocalizator.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <Style TargetType="DataGrid">
+            <Setter Property="AlternatingRowBackground"
+                    Value="#FFF7F7F7" />
+            <Setter Property="BorderBrush"
+                    Value="{DynamicResource AccentColorBrush}" />
+            <Setter Property="HorizontalGridLinesBrush"
+                    Value="{DynamicResource AccentColorBrush}" />
+            <Setter Property="VerticalGridLinesBrush"
+                    Value="{DynamicResource AccentColorBrush}" />
+            <Setter Property="Background"
+                    Value="{DynamicResource WhiteBrush}" />
+        </Style>
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background"
+                    Value="{DynamicResource AccentColorBrush}" />
+            <Setter Property="Foreground"
+                    Value="{DynamicResource WhiteBrush}" />
+            <Setter Property="FontSize"
+                    Value="13" />
+            <Setter Property="FontWeight"
+                    Value="Bold" />
+        </Style>
+    </Application.Resources>
+</Application>
