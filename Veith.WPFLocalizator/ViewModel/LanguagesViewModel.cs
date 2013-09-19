@@ -56,19 +56,20 @@ namespace Veith.WPFLocalizator.ViewModel
         {
             SelectCulture(CzechCultureCode);
 
-            this.IsCzechSelected = true;
-            this.IsEnglishSelected = false;
-
-            this.RaisePropertyChanged(() => this.IsCzechSelected);
-            this.RaisePropertyChanged(() => this.IsEnglishSelected);
+            this.ChangeLanguage(true, false);
         }
 
         private void SelectEnglish()
         {
             SelectCulture(EnglishCultureCode);
 
-            this.IsCzechSelected = false;
-            this.IsEnglishSelected = true;
+            this.ChangeLanguage(false, true);
+        }
+
+        private void ChangeLanguage(bool isCzechSelected, bool isEnglishSelected)
+        {
+            this.IsCzechSelected = isCzechSelected;
+            this.IsEnglishSelected = isEnglishSelected;
 
             this.RaisePropertyChanged(() => this.IsCzechSelected);
             this.RaisePropertyChanged(() => this.IsEnglishSelected);

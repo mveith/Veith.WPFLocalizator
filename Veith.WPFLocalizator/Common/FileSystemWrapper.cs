@@ -9,7 +9,7 @@ namespace Veith.WPFLocalizator.Common
 {
     public class FileSystemWrapper : IFileSystemWrapper
     {
-        private Encoding defaultEncoding = Encoding.UTF8;
+        private readonly Encoding defaultEncoding = Encoding.UTF8;
 
         public IEnumerable<string> GetFilesWithExtensionInDirectory(string directoryPath, string extension)
         {

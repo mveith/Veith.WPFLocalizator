@@ -9,14 +9,14 @@ namespace Veith.WPFLocalizator.ViewModel
 {
     public class UserEditingKeysWindowViewModel
     {
-        private string[] originalKeys;
-        private bool isCanceled;
+        private readonly string[] originalKeys;
+        private bool isSaved;
 
         public UserEditingKeysWindowViewModel(IEnumerable<KeyAndValueItem> items, string fileName)
         {
-            this.SaveKeysCommand = new RelayCommand(() => this.Close(), () => this.AreKeysValid());
-            this.RevertCommand = new RelayCommand(() => this.Revert(), () => this.ExistsChanges());
-            this.CancelCommand = new RelayCommand(() => this.Cancel());
+            this.SaveKeysCommand = new RelayCommand(this.Save, this.AreKeysValid);
+            this.RevertCommand = new RelayCommand(this.Revert, this.ExistsChanges);
+            this.CancelCommand = new RelayCommand(this.Cancel);
 
             this.Items = items;
             this.FileName = fileName;
@@ -39,7 +39,7 @@ namespace Veith.WPFLocalizator.ViewModel
         {
             get
             {
-                return !this.isCanceled && this.AreKeysValid();
+                return this.isSaved && this.AreKeysValid();
             }
         }
 
@@ -75,9 +75,15 @@ namespace Veith.WPFLocalizator.ViewModel
             return allKeysSingle;
         }
 
+        private void Save()
+        {
+            this.isSaved = true;
+            this.Close();
+        }
+
         private void Cancel()
         {
-            this.isCanceled = true;
+            this.isSaved = true;
 
             this.Close();
         }

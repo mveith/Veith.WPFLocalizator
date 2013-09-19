@@ -21,7 +21,13 @@ namespace Veith.WPFLocalizator.ViewModel
             var container = new LocalizatorContainer();
             this.Container = container;
 
-            container.RegisterInitialComponents(GetProjectsDirectory(), GetStringPartsNames(), GetBackupDirectory());
+            container.RegisterInitialComponents(new LocalizatorContainerSettings()
+            {
+                ProjectsDirectory = GetProjectsDirectory(),
+                StringPartsNames = GetStringPartsNames(),
+                BackupDirectory = GetBackupDirectory(),
+                KeysGenerator = GetSelectedKeysGenerator()
+            });
 
             this.configuration = this.LoadConfiguration();
 
@@ -83,6 +89,11 @@ namespace Veith.WPFLocalizator.ViewModel
         private static string[] GetStringPartsNames()
         {
             return ConfigurationManager.AppSettings["StringParts"].Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+        }
+
+        private static string GetSelectedKeysGenerator()
+        {
+            return ConfigurationManager.AppSettings["KeysGenerator"];
         }
 
         private static string GetProjectsDirectory()

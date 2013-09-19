@@ -6,7 +6,7 @@ namespace Veith.WPFLocalizator
     {
         public static void UpdateOwner(this Window window)
         {
-            var mainWindow = App.Current.MainWindow;
+            var mainWindow = Application.Current.MainWindow;
 
             if (mainWindow != null && window != mainWindow)
             {

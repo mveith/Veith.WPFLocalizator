@@ -8,7 +8,7 @@ namespace Veith.WPFLocalizator.DocumentsSerializing
 {
     public class DefaultDocumentSerializer : IDocumentSerializer
     {
-        private IFileSystemWrapper fileSystemWrapper;
+        private readonly IFileSystemWrapper fileSystemWrapper;
 
         public DefaultDocumentSerializer(IFileSystemWrapper fileSystemWrapper)
         {

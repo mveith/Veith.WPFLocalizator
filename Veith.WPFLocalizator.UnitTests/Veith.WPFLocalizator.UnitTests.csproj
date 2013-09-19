@@ -133,6 +133,7 @@
     <Compile Include="DocumentsProcessing\DirectoriesProcessingWithBackupTests.cs" />
     <Compile Include="DocumentsProcessing\DocumentsProcessingBase.cs" />
     <Compile Include="DocumentsProcessing\DocumentsProcessingTests.cs" />
+    <Compile Include="DocumentsProcessing\GeneratingResourceKeysFromValuesTests.cs" />
     <Compile Include="DocumentsProcessing\GeneratingResourceKeysTests.cs" />
     <Compile Include="DocumentsProcessing\ProcessingToResourcesDictionaryTests.cs" />
     <Compile Include="DocumentsProcessing\UserInteractionInProcessingDocument.cs" />

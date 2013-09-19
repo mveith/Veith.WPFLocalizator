@@ -88,12 +88,12 @@ namespace Veith.WPFLocalizator.UnitTests.ViewModel
         }
 
         [TestMethod]
-        public void IfKeysAreNotDuplicatedThenIsValidIsTrue()
+        public void IfKeysAreNotDuplicatedThenCanSave()
         {
             this.items.Add(new KeyAndValueItem("KEY1", "VALUE1"));
             this.items.Add(new KeyAndValueItem("KEY2", "VALUE2"));
 
-            Assert.AreEqual(true, this.viewModel.IsValid);
+            Assert.AreEqual(true, this.viewModel.SaveKeysCommand.CanExecute(null));
         }
 
         [TestMethod]
@@ -109,20 +109,26 @@ namespace Veith.WPFLocalizator.UnitTests.ViewModel
         }
 
         [TestMethod]
-        public void IfIsCanceledThenIsValidIsFalse()
-        {
-            this.viewModel.CancelCommand.Execute(null);
-
-            Assert.AreEqual(false, this.viewModel.IsValid);
-        }
-
-        [TestMethod]
-        public void IfKeysAreInvalidButAreNotSelectedForLocalizationThenIsValid()
+        public void IfKeysAreInvalidButAreNotSelectedForLocalizationThenCanSave()
         {
             this.items.Add(new KeyAndValueItem("KEY1", "VALUE1"));
             this.items.Add(new KeyAndValueItem("KEY1", "VALUE2") { IsSelectedForLocalization = false });
 
+            Assert.AreEqual(true, this.viewModel.SaveKeysCommand.CanExecute(null));
+        }
+
+        [TestMethod]
+        public void IfSaveThenIsValidIsTrue()
+        {
+            this.viewModel.SaveKeysCommand.Execute(null);
+
             Assert.AreEqual(true, this.viewModel.IsValid);
+        }
+
+        [TestMethod]
+        public void IfIsNotSavedThenIsValidIsFalse()
+        {
+            Assert.AreEqual(false, this.viewModel.IsValid);
         }
 
         private void CreateViewModel()

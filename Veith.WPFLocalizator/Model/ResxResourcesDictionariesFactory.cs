@@ -5,7 +5,7 @@ namespace Veith.WPFLocalizator.Model
 {
     public class ResxResourcesDictionariesFactory : IResourcesDictionariesFactory
     {
-        private IFileSystemWrapper fileSystem;
+        private readonly IFileSystemWrapper fileSystem;
 
         public ResxResourcesDictionariesFactory(IFileSystemWrapper fileSystem)
         {

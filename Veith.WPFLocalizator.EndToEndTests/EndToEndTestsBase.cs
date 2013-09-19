@@ -100,7 +100,7 @@ namespace Veith.WPFLocalizator.EndToEndTests
         private LocalizatorContainer CreateTestContainer(string[] stringPartsNames, DocumentProcessorConfiguration settings)
         {
             var container = new LocalizatorContainer();
-            container.RegisterInitialComponents(string.Empty, stringPartsNames, string.Empty);
+            container.RegisterInitialComponents(new LocalizatorContainerSettings() { ProjectsDirectory = string.Empty, StringPartsNames = stringPartsNames, BackupDirectory = string.Empty });
             container.RegisterMainViewModel(settings);
             container.Register(Component.For<IUserInteraction>().IsDefault().ImplementedBy<TestUserInteraction>().DependsOn(new { userEditingPostfix = userEditingPostfix }));
             container.Register(Component.For<IDirectoriesProcessor>().IsDefault().ImplementedBy<DirectoriesProcessor>().Named("Overriding"));

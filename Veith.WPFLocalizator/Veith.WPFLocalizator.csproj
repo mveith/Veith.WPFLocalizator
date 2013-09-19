@@ -142,6 +142,7 @@
     <Compile Include="Common\IBackupTool.cs" />
     <Compile Include="Common\IFileSystemWrapper.cs" />
     <Compile Include="Common\LocalizationExtensions.cs" />
+    <Compile Include="Common\StringExtensions.cs" />
     <Compile Include="Common\XDocumentExtensions.cs" />
     <Compile Include="Common\XElementExtensions.cs" />
     <Compile Include="Configuration\ConfigurationFactory.cs" />
@@ -153,14 +154,15 @@
     <Compile Include="DocumentsParsing\IDocumentParser.cs" />
     <Compile Include="DocumentsParsing\XAMLParsingTools\DocumentAttribute.cs" />
     <Compile Include="DocumentsParsing\XAMLParsingTools\DocumentAttributeFactory.cs" />
-    <Compile Include="DocumentsProcessing\DefaultResourcesKeysGenerator.cs" />
+    <Compile Include="DocumentsProcessing\KeysGenerating\DefaultResourcesKeysGenerator.cs" />
     <Compile Include="DocumentsProcessing\DirectoriesProcessor.cs" />
     <Compile Include="DocumentsProcessing\DirectoriesProcessorWithBackup.cs" />
     <Compile Include="DocumentsProcessing\DocumentProcessorConfiguration.cs" />
     <Compile Include="DocumentsProcessing\DocumentsProcessor.cs" />
     <Compile Include="DocumentsProcessing\IDocumentProcessor.cs" />
-    <Compile Include="DocumentsProcessing\IResourcesKeysGenerator.cs" />
-    <Compile Include="DocumentsProcessing\KeysForPartsGenerator.cs" />
+    <Compile Include="DocumentsProcessing\KeysGenerating\IResourcesKeysGenerator.cs" />
+    <Compile Include="DocumentsProcessing\KeysGenerating\KeysForPartsGenerator.cs" />
+    <Compile Include="DocumentsProcessing\KeysGenerating\ResourcesKeysFromPartValueGenerator.cs" />
     <Compile Include="DocumentsSerializing\DefaultDocumentSerializer.cs" />
     <Compile Include="DocumentsSerializing\DocumentsSerializingException.cs" />
     <Compile Include="DocumentsSerializing\IDocumentSerializer.cs" />
@@ -250,7 +252,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
