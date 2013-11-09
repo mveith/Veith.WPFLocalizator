@@ -10,9 +10,7 @@ WPF Localizator is intended for developers who are working on multilingual appli
 ![WPF Localizator - Main Window](http://s21.postimg.org/gftwaq3rr/Main_Window.png)
 
 ## Download ##
-[x86 version](http://sdrv.ms/185OaWo "x86 version")
-
-[x64 version](http://sdrv.ms/ZrqtHE "x64 version")
+[Release](https://github.com/mveith/Veith.WPFLocalizator/releases "Release")
 
 ## Instructions ##
 ### A) Processing folders ###
