@@ -83,7 +83,7 @@ namespace Veith.WPFLocalizator.ViewModel
 
         private void Cancel()
         {
-            this.isSaved = true;
+            this.isSaved = false;
 
             this.Close();
         }

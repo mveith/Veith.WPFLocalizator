@@ -2,7 +2,6 @@
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Veith.WPFLocalizator.Model;
-using Veith.WPFLocalizator.UserInteraction;
 using Veith.WPFLocalizator.ViewModel;
 
 namespace Veith.WPFLocalizator.UnitTests.ViewModel
@@ -128,6 +127,17 @@ namespace Veith.WPFLocalizator.UnitTests.ViewModel
         [TestMethod]
         public void IfIsNotSavedThenIsValidIsFalse()
         {
+            Assert.AreEqual(false, this.viewModel.IsValid);
+        }
+
+        [TestMethod]
+        public void IfCanceledThenIsValidIsFalse()
+        {
+            this.items.Add(new KeyAndValueItem("KEY1", "VALUE1"));
+            this.items.Add(new KeyAndValueItem("KEY2", "VALUE2"));
+
+            this.viewModel.CancelCommand.Execute(null);
+
             Assert.AreEqual(false, this.viewModel.IsValid);
         }
 
